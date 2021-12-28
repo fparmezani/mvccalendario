@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using MvcCalendario.Business.Models;
 
 namespace MvcCalendario.App.Data
 {
@@ -12,5 +13,6 @@ namespace MvcCalendario.App.Data
             : base(options)
         {
         }
+        public DbSet<MvcCalendario.Business.Models.Cliente> Cliente { get; set; }
     }
 }

@@ -32,6 +32,7 @@ namespace MvcCalendario.App
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
 
+            services.AddAutoMapper(typeof(Startup));
 
             services.AddDatabaseDeveloperPageExceptionFilter();
 

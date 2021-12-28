@@ -1,0 +1,30 @@
+﻿using MvcCalendario.Business.Models;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+
+namespace MvcCalendario.App.ViewModels
+{
+    public class ClienteViewModel
+    {
+
+        public Guid Id { get; set; }
+
+        [Required(ErrorMessage = "O Campo {0} é obrigatório")]
+        [StringLength(200, ErrorMessage = "O campo {0} precisa ter entre {2} e {1} caracteres", MinimumLength = 2)]
+        public string Nome { get; set; }
+
+        [Required(ErrorMessage = "O Campo {0} é obrigatório")]
+        public string CPF { get; set; }
+
+        public Grupo Grupo { get; set; }
+
+        [ScaffoldColumn(false)]
+        public DateTime DataCadastro { get; set; }
+
+        public IEnumerable<ContatoViewModel> Contatos { get; set; }
+
+        public IEnumerable<EnderecoViewModel> Enderecos { get; set; }
+
+    }
+}

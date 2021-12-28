@@ -1,14 +1,16 @@
 ﻿using MvcCalendario.Business.Models;
 using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace MvcCalendario.Business.Interfaces
 {
     public interface IClienteRepository : IRepository<Cliente>
     {
-        Task<Cliente> ObterClienteContato(Guid id);
+        Task<Cliente> ObterClienteContatos(Guid id);
 
-        Task<Cliente> ObterClienteEndereco(Guid id);
-
+        Task<IEnumerable<Cliente>> ObterClienteContatos();
+        Task<IEnumerable<Cliente>> ObterClienteEnderecos();
+        Task<Cliente> ObterClienteEnderecos(Guid id);
     }
 }
