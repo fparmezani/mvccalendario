@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.31624.102
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcCalendario.App", "src\MvcCalendario.App\MvcCalendario.App.csproj", "{8B16B76A-B6EA-4B47-A58A-70B6A721E229}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcCalendario.Business", "src\MvcCalendario.Business\MvcCalendario.Business.csproj", "{40C9A6E4-95DF-4F01-9C0C-8B2F4F111DA5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcCalendario.Data", "src\MvcCalendario.Data\MvcCalendario.Data.csproj", "{28C2DE67-A74B-48D4-AABB-5A88FF7531E6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{8B16B76A-B6EA-4B47-A58A-70B6A721E229}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8B16B76A-B6EA-4B47-A58A-70B6A721E229}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8B16B76A-B6EA-4B47-A58A-70B6A721E229}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40C9A6E4-95DF-4F01-9C0C-8B2F4F111DA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40C9A6E4-95DF-4F01-9C0C-8B2F4F111DA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40C9A6E4-95DF-4F01-9C0C-8B2F4F111DA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40C9A6E4-95DF-4F01-9C0C-8B2F4F111DA5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28C2DE67-A74B-48D4-AABB-5A88FF7531E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28C2DE67-A74B-48D4-AABB-5A88FF7531E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28C2DE67-A74B-48D4-AABB-5A88FF7531E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28C2DE67-A74B-48D4-AABB-5A88FF7531E6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
