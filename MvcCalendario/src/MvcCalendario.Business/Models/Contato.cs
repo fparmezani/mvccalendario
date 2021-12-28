@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace MvcCalendario.Business.Models
+﻿namespace MvcCalendario.Business.Models
 {
     public class Contato : Entity
     {
@@ -11,10 +9,6 @@ namespace MvcCalendario.Business.Models
         public bool Principal { get; set; }
 
         public bool EhWhatsApp { get; set; }
-
-        /*Relacionamento*/
-        public Guid ClienteId { get; set; }
-        public Cliente Cliente { get; set; }
 
     }
 }

@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace MvcCalendario.Business.Models
+﻿namespace MvcCalendario.Business.Models
 {
     public class Endereco : Entity
     {
@@ -19,8 +17,5 @@ namespace MvcCalendario.Business.Models
 
         public string UF { get; set; }
 
-        /*Relacionamento*/
-        public Guid ClienteId { get; set; }
-        public Cliente Cliente { get; set; }
     }
 }

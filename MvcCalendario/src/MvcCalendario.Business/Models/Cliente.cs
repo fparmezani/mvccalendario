@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace MvcCalendario.Business.Models
 {
@@ -15,8 +16,11 @@ namespace MvcCalendario.Business.Models
 
         /*Relacionamento*/
 
+        public Guid ContatoId { get; set; }
+
         public Contato Contato { get; set; }
 
+        public Guid EnderecoId { get; set; }
         public Endereco Endereco { get; set; }
 
         public IEnumerable<Contato> Contatos { get; set; }

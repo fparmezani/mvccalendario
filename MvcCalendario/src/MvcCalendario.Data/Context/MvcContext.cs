@@ -22,7 +22,6 @@ namespace MvcCalendario.Data.Context
         public DbSet<Endereco> Enderecos { get; set; }
         public DbSet<Telefone> Telefone { get; set; }
 
-
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
 
