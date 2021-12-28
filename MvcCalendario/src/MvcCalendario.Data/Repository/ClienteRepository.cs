@@ -14,13 +14,13 @@ namespace MvcCalendario.Data.Repository
 
         public async Task<Cliente> ObterClienteContato(Guid id)
         {
-            return await Db.Clientes.AsNoTracking().Include(f => f.Contato)
+            return await Db.Clientes.AsNoTracking().Include(f => f.Contatos)
                 .FirstOrDefaultAsync(p => p.Id == id);
         }
 
         public async Task<Cliente> ObterClienteEndereco(Guid id)
         {
-            return await Db.Clientes.AsNoTracking().Include(f => f.Endereco)
+            return await Db.Clientes.AsNoTracking().Include(f => f.Enderecos)
                 .FirstOrDefaultAsync(p => p.Id == id);
         }
     }
