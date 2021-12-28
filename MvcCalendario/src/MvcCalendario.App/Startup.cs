@@ -8,6 +8,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using MvcCalendario.App.Data;
+using MvcCalendario.Business.Interfaces;
 using MvcCalendario.Data.Context;
 using System;
 using System.Collections.Generic;
@@ -43,6 +44,11 @@ namespace MvcCalendario.App
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddControllersWithViews();
+
+
+            services.AddScoped<MvcContext>();
+            services.AddScoped<IClienteRepository, ClienteRepository>
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
