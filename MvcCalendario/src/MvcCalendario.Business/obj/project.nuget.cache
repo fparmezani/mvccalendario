@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "IilSi5fa/Hyh1IYgu4myKXDF8B1EMDcUw5/FLeFdkEXVF3wGRkVl/Kb6zXv7aP9qo8wRBAP/2JIXVETjPMv6oQ==",
+  "dgSpecHash": "xirqZx6rpgT4ThGLRoxNBnvvoiDEhzjZX2Dw5QiKZO6LYScFS1al73NjBUNQp2txco1RPeAVFF5RdAXmnsyHsw==",
   "success": true,
-  "projectFilePath": "F:\\Projetos\\Desenvolvimento\\Consultoria\\mvccalendario\\MvcCalendario\\src\\MvcCalendario.Business\\MvcCalendario.Business.csproj",
+  "projectFilePath": "C:\\Users\\victor.matucuma\\Desktop\\projetos\\mvccalendario\\MvcCalendario\\src\\MvcCalendario.Business\\MvcCalendario.Business.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

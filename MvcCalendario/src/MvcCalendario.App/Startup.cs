@@ -53,6 +53,7 @@ namespace MvcCalendario.App
             {
                 app.UseDeveloperExceptionPage();
                 app.UseMigrationsEndPoint();
+                app.UseBrowserLink();
             }
             else
             {

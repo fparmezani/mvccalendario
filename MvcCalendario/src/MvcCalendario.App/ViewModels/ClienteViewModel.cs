@@ -26,5 +26,29 @@ namespace MvcCalendario.App.ViewModels
 
         public IEnumerable<EnderecoViewModel> Enderecos { get; set; }
 
+        public Guid ClienteId { get; set; }
+        public Telefone Telefone { get; set; }
+        public Telefone Celular { get; set; }
+
+        [Required(ErrorMessage = "O campo {0} é obrigatório")]
+        [StringLength(1000, ErrorMessage = "O campo {0} precisa ter entre {2} e {1} caracteres", MinimumLength = 2)]
+        public string Email { get; set; }
+        public bool Principal { get; set; }
+        public bool EhWhatsApp { get; set; }
+
+        public string Logradouro { get; set; }
+
+        public string Numero { get; set; }
+
+        public string Complemento { get; set; }
+
+        public string Bairro { get; set; }
+
+        public string Cep { get; set; }
+
+        public string Cidade { get; set; }
+
+        public string UF { get; set; }
+
     }
 }
