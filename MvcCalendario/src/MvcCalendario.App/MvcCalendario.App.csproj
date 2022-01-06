@@ -24,4 +24,9 @@
     <ProjectReference Include="..\MvcCalendario.Data\MvcCalendario.Data.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Configurations\" />
+    <Folder Include="NewFolder\" />
+  </ItemGroup>
+
 </Project>
