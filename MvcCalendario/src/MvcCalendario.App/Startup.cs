@@ -5,10 +5,9 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using MvcCalendario.App.Configurations;
 using MvcCalendario.App.Data;
-using MvcCalendario.Business.Interfaces;
 using MvcCalendario.Data.Context;
-using MvcCalendario.Data.Repository;
 
 namespace MvcCalendario.App
 {
@@ -41,8 +40,7 @@ namespace MvcCalendario.App
             services.AddControllersWithViews();
 
 
-            services.AddScoped<MvcContext>();
-            services.AddScoped<IClienteRepository, ClienteRepository>();
+            services.ResolveDependencies();
 
         }
 

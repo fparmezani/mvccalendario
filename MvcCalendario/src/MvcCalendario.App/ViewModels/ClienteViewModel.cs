@@ -8,6 +8,14 @@ namespace MvcCalendario.App.ViewModels
     public class ClienteViewModel
     {
 
+
+
+        public ClienteViewModel()
+        {
+            Contatos = new List<ContatoViewModel>();
+            Enderecos = new List<EnderecoViewModel>();
+
+        }
         public Guid Id { get; set; }
 
         [Required(ErrorMessage = "O Campo {0} é obrigatório")]
@@ -17,6 +25,7 @@ namespace MvcCalendario.App.ViewModels
         [Required(ErrorMessage = "O Campo {0} é obrigatório")]
         public string CPF { get; set; }
 
+        [Required(ErrorMessage = "O Campo {0} é obrigatório")]
         public Grupo Grupo { get; set; }
 
         [ScaffoldColumn(false)]
