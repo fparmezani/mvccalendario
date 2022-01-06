@@ -11,7 +11,6 @@
 using System;
 using System.Reflection;
 
-[assembly: Microsoft.AspNetCore.Identity.UI.UIFrameworkAttribute("Bootstrap4")]
 [assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("aspnet-MvcCalendario.App-30D18180-FAC0-4514-95A2-46BA5AF51E2A")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("MvcCalendario.App")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
