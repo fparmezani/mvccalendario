@@ -52,6 +52,7 @@ namespace MvcCalendario.Business.Services
             await _clienteRepository.Remover(id);
         }
 
+
         public void Dispose()
         {
             _clienteRepository?.Dispose();

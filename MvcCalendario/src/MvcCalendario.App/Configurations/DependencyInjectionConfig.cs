@@ -19,6 +19,7 @@ namespace MvcCalendario.App.Configurations
 
             services.AddScoped<INotificador, Notificador>();
             services.AddScoped<IClienteService, ClienteService>();
+            services.AddScoped<IEnderecoService, EnderecoService>();
 
 
             return services;

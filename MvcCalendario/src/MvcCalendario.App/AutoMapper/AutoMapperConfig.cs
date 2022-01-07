@@ -9,6 +9,7 @@ namespace MvcCalendario.App.AutoMapper
         public AutoMapperConfig()
         {
             CreateMap<Cliente, ClienteViewModel>().ReverseMap();
+            CreateMap<Endereco, EnderecoViewModel>().ReverseMap();
         }
     }
 }
