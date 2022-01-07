@@ -1,0 +1,70 @@
+﻿@model MvcCalendario.App.ViewModels.ClienteViewModel
+<div style="padding-top: 20px">
+    <div>
+        <h4>Endereço</h4>
+        <hr />
+    </div>
+    @if (Model != null)
+    {
+        <table class="table table-hover">
+            <thead class="thead-dark">
+                <tr>
+                    <th>
+                        @Html.DisplayName("Logradouro")
+                    </th>
+                    <th>
+                        @Html.DisplayName("Numero")
+                    </th>
+                    <th>
+                        @Html.DisplayName("Complemento")
+                    </th>
+                    <th>
+                        @Html.DisplayName("Bairro")
+                    </th>
+                    <th>
+                        @Html.DisplayName("Cep")
+                    </th>
+                    <th>
+                        @Html.DisplayName("Cidade")
+                    </th>
+                    <th>
+                        @Html.DisplayName("Estado")
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            @foreach (var item in Model.Enderecos)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(model => model.Logradouro)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => model.Numero)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => model.Complemento)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => model.Bairro)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => model.Cep)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => model.Cidade)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => model.UF)
+                    </td>
+                    <td>
+                        <a supress-by-action="Edit,ObterEndereco" asp-action="AtualizarEndereco" asp-route-id="@Model.Id" class="btn btn-info" data-modal="">
+                            <span title="Editar" class="fa fa-pencil-alt"></span>
+                        </a>
+                    </td>
+                </tr>
+
+            }
+        </table>
+    }
+</div>

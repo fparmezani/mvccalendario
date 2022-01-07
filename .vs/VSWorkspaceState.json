@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\MvcCalendario"
   ],
-  "SelectedNode": "\\MvcCalendario.sln",
+  "SelectedNode": "\\MvcCalendario\\MvcCalendario.sln",
   "PreviewInSolutionExplorer": false
 }

@@ -1,0 +1,46 @@
+﻿@model MvcCalendario.App.ViewModels.ClienteViewModel
+<div style="padding-top: 20px">
+    <div>
+        <h4>Contatos</h4>
+        <hr />
+    </div>
+    @if (Model != null)
+    {
+        <table class="table table-hover">
+            <thead class="thead-dark">
+                <tr>
+                    <th>
+                        @Html.DisplayName("Telefone")
+                    </th>
+                    <th>
+                        @Html.DisplayName("Celular")
+                    </th>
+                    <th>
+                        @Html.DisplayName("E-mail")
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            @foreach (var item in Model.Contatos)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(model => model.Telefone)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => model.Celular)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => model.Email)
+                    </td>
+                    <td>
+                        <a supress-by-action="Edit,ObterEndereco" asp-action="AtualizarEndereco" asp-route-id="@Model.Id" class="btn btn-info" data-modal="">
+                            <span title="Editar" class="fa fa-pencil-alt"></span>
+                        </a>
+                    </td>
+                </tr>
+
+            }
+        </table>
+    }
+</div>
