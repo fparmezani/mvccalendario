@@ -44,7 +44,6 @@ namespace MvcCalendario.App
 
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
@@ -55,8 +54,8 @@ namespace MvcCalendario.App
             }
             else
             {
-                app.UseExceptionHandler("/Home/Error");
-                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+                app.UseExceptionHandler("/erro/500");
+                app.UseStatusCodePagesWithRedirects("/erro/{0}");
                 app.UseHsts();
             }
             app.UseHttpsRedirection();
@@ -67,11 +66,13 @@ namespace MvcCalendario.App
             app.UseAuthentication();
             app.UseAuthorization();
 
+            app.UseGlobalizationConfig();
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=Cliente}/{action=Index}/{id?}");
                 endpoints.MapRazorPages();
             });
         }

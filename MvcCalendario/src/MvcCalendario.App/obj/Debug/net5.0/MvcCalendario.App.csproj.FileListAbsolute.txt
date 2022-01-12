@@ -150,14 +150,18 @@ F:\Projetos\Desenvolvimento\Consultoria\mvccalendario\MvcCalendario\src\MvcCalen
 F:\Projetos\Desenvolvimento\Consultoria\mvccalendario\MvcCalendario\src\MvcCalendario.App\obj\Debug\net5.0\MvcCalendario.App.RazorCoreGenerate.cache
 F:\Projetos\Desenvolvimento\Consultoria\mvccalendario\MvcCalendario\src\MvcCalendario.App\obj\Debug\net5.0\Razor\Areas\Identity\Pages\_ViewStart.cshtml.g.cs
 F:\Projetos\Desenvolvimento\Consultoria\mvccalendario\MvcCalendario\src\MvcCalendario.App\obj\Debug\net5.0\Razor\Views\Cliente\Create.cshtml.g.cs
+F:\Projetos\Desenvolvimento\Consultoria\mvccalendario\MvcCalendario\src\MvcCalendario.App\obj\Debug\net5.0\Razor\Views\Cliente\Delete.cshtml.g.cs
 F:\Projetos\Desenvolvimento\Consultoria\mvccalendario\MvcCalendario\src\MvcCalendario.App\obj\Debug\net5.0\Razor\Views\Cliente\Details.cshtml.g.cs
 F:\Projetos\Desenvolvimento\Consultoria\mvccalendario\MvcCalendario\src\MvcCalendario.App\obj\Debug\net5.0\Razor\Views\Cliente\Edit.cshtml.g.cs
 F:\Projetos\Desenvolvimento\Consultoria\mvccalendario\MvcCalendario\src\MvcCalendario.App\obj\Debug\net5.0\Razor\Views\Cliente\Index.cshtml.g.cs
 F:\Projetos\Desenvolvimento\Consultoria\mvccalendario\MvcCalendario\src\MvcCalendario.App\obj\Debug\net5.0\Razor\Views\Cliente\_Contatos.cshtml.g.cs
 F:\Projetos\Desenvolvimento\Consultoria\mvccalendario\MvcCalendario\src\MvcCalendario.App\obj\Debug\net5.0\Razor\Views\Cliente\_Enderecos.cshtml.g.cs
 F:\Projetos\Desenvolvimento\Consultoria\mvccalendario\MvcCalendario\src\MvcCalendario.App\obj\Debug\net5.0\Razor\Views\Cliente\_ListaClientes.cshtml.g.cs
+F:\Projetos\Desenvolvimento\Consultoria\mvccalendario\MvcCalendario\src\MvcCalendario.App\obj\Debug\net5.0\Razor\Views\Cliente\_NovoContato.cshtml.g.cs
+F:\Projetos\Desenvolvimento\Consultoria\mvccalendario\MvcCalendario\src\MvcCalendario.App\obj\Debug\net5.0\Razor\Views\Cliente\_NovoEndereco.cshtml.g.cs
 F:\Projetos\Desenvolvimento\Consultoria\mvccalendario\MvcCalendario\src\MvcCalendario.App\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
 F:\Projetos\Desenvolvimento\Consultoria\mvccalendario\MvcCalendario\src\MvcCalendario.App\obj\Debug\net5.0\Razor\Views\Home\Privacy.cshtml.g.cs
+F:\Projetos\Desenvolvimento\Consultoria\mvccalendario\MvcCalendario\src\MvcCalendario.App\obj\Debug\net5.0\Razor\Views\Shared\Components\Summary\Default.cshtml.g.cs
 F:\Projetos\Desenvolvimento\Consultoria\mvccalendario\MvcCalendario\src\MvcCalendario.App\obj\Debug\net5.0\Razor\Views\Shared\Error.cshtml.g.cs
 F:\Projetos\Desenvolvimento\Consultoria\mvccalendario\MvcCalendario\src\MvcCalendario.App\obj\Debug\net5.0\Razor\Views\Shared\_Layout.cshtml.g.cs
 F:\Projetos\Desenvolvimento\Consultoria\mvccalendario\MvcCalendario\src\MvcCalendario.App\obj\Debug\net5.0\Razor\Views\Shared\_LoginPartial.cshtml.g.cs
@@ -172,4 +176,3 @@ F:\Projetos\Desenvolvimento\Consultoria\mvccalendario\MvcCalendario\src\MvcCalen
 F:\Projetos\Desenvolvimento\Consultoria\mvccalendario\MvcCalendario\src\MvcCalendario.App\obj\Debug\net5.0\ref\MvcCalendario.App.dll
 F:\Projetos\Desenvolvimento\Consultoria\mvccalendario\MvcCalendario\src\MvcCalendario.App\obj\Debug\net5.0\MvcCalendario.App.pdb
 F:\Projetos\Desenvolvimento\Consultoria\mvccalendario\MvcCalendario\src\MvcCalendario.App\obj\Debug\net5.0\MvcCalendario.App.genruntimeconfig.cache
-F:\Projetos\Desenvolvimento\Consultoria\mvccalendario\MvcCalendario\src\MvcCalendario.App\obj\Debug\net5.0\Razor\Views\Cliente\_NovoEndereco.cshtml.g.cs

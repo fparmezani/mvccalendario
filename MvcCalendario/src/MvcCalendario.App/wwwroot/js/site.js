@@ -12,7 +12,8 @@
                                     keyboard: true
                                 },
                                 'show');
-                            bindForm(this);
+                            var divReturn = $("#divReturn").val();
+                            bindForm(this,divReturn);
                         });
                     return false;
                 });
@@ -20,7 +21,7 @@
     });
 }
 
-function bindForm(dialog) {
+function bindForm(dialog, divReturn) {
     $('form', dialog).submit(function () {
         $.ajax({
             url: this.action,
@@ -29,7 +30,7 @@ function bindForm(dialog) {
             success: function (result) {
                 if (result.success) {
                     $('#myModal').modal('hide');
-                    $('#EnderecoTarget').load(result.url); // Carrega o resultado HTML para a div demarcada
+                    $('#'+divReturn).load(result.url); // Carrega o resultado HTML para a div demarcada
                 } else {
                     $('#myModalContent').html(result);
                     bindForm(dialog);

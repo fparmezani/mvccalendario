@@ -1,11 +1,9 @@
-﻿@model IEnumerable<MvcCalendario.App.ViewModels.ClienteViewModel>
+﻿@using MvcCalendario.App.Extensions
+@model IEnumerable<MvcCalendario.App.ViewModels.ClienteViewModel>
 
 <table class="table table-hover">
     <thead class="thead-dark">
         <tr>
-            <th>
-
-            </th>
             <th>
                 @Html.DisplayNameFor(model => model.Nome)
             </th>
@@ -26,7 +24,7 @@
                     @Html.DisplayFor(modelItem => item.Nome)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.CPF)
+                    @this.FormataDocumento(item.CPF)
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.Grupo)

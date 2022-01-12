@@ -1,7 +1,6 @@
 F:\Projetos\Desenvolvimento\Consultoria\mvccalendario\MvcCalendario\src\MvcCalendario.Business\bin\Debug\netcoreapp3.1\MvcCalendario.Business.deps.json
 F:\Projetos\Desenvolvimento\Consultoria\mvccalendario\MvcCalendario\src\MvcCalendario.Business\bin\Debug\netcoreapp3.1\MvcCalendario.Business.dll
 F:\Projetos\Desenvolvimento\Consultoria\mvccalendario\MvcCalendario\src\MvcCalendario.Business\bin\Debug\netcoreapp3.1\MvcCalendario.Business.pdb
-F:\Projetos\Desenvolvimento\Consultoria\mvccalendario\MvcCalendario\src\MvcCalendario.Business\obj\Debug\netcoreapp3.1\MvcCalendario.Business.csproj.AssemblyReference.cache
 F:\Projetos\Desenvolvimento\Consultoria\mvccalendario\MvcCalendario\src\MvcCalendario.Business\obj\Debug\netcoreapp3.1\MvcCalendario.Business.GeneratedMSBuildEditorConfig.editorconfig
 F:\Projetos\Desenvolvimento\Consultoria\mvccalendario\MvcCalendario\src\MvcCalendario.Business\obj\Debug\netcoreapp3.1\MvcCalendario.Business.AssemblyInfoInputs.cache
 F:\Projetos\Desenvolvimento\Consultoria\mvccalendario\MvcCalendario\src\MvcCalendario.Business\obj\Debug\netcoreapp3.1\MvcCalendario.Business.AssemblyInfo.cs

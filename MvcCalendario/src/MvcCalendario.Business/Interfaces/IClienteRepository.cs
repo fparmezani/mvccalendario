@@ -17,6 +17,7 @@ namespace MvcCalendario.Business.Interfaces
         Task<Cliente> ObterClienteEnderecos(Guid id);
 
         Task RemoverEnderecosPorCliente(Guid id);
+        Task RemoverContatosPorCliente(Guid id);
 
     }
 }

@@ -10,7 +10,8 @@
 <div class="row">
     <div class="col-md">
         <form asp-action="Create">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <vc:Summary></vc:Summary>
+            
             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                 <div class="card">
                     <div class=" card-body row">
@@ -27,11 +28,6 @@
                                     <label asp-for="CPF" class="control-label"></label>
                                     <input class="form-control form-control-sm" asp-for="CPF" />
                                     <span asp-validation-for="CPF" class="text-danger"></span>
-                                </div>
-                                <div class="col-6">
-                                    <label asp-for="Email" class="control-label"></label>
-                                    <input class="form-control form-control-sm" asp-for="Email" />
-                                    <span asp-validation-for="Email" class="text-danger"></span>
                                 </div>
                                 <div class="col-4">
                                     <label asp-for="Grupo" class="control-label"></label>

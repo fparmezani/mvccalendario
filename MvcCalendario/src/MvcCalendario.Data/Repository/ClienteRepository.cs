@@ -50,6 +50,13 @@ namespace MvcCalendario.Data.Repository
             Db.SaveChanges();
 
         }
+        public async Task RemoverContatosPorCliente(Guid id)
+        {
+            var cliente = await ObterClienteContatos(id);
+            Db.Contatos.RemoveRange(cliente.Contatos);
+            Db.SaveChanges();
+
+        }
 
     }
 }

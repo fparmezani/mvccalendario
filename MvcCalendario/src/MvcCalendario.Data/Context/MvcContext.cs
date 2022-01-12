@@ -20,7 +20,6 @@ namespace MvcCalendario.Data.Context
         public DbSet<Cliente> Clientes { get; set; }
         public DbSet<Contato> Contatos { get; set; }
         public DbSet<Endereco> Enderecos { get; set; }
-        public DbSet<Telefone> Telefone { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

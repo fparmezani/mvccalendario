@@ -16,7 +16,7 @@ namespace MvcCalendario.Data.Mappings
 
             builder.Property(p => p.Cep)
                 .IsRequired()
-                .HasColumnType("varchar(7)");
+                .HasColumnType("varchar(8)");
 
             builder.Property(p => p.Cidade)
                 .IsRequired()

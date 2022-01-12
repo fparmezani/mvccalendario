@@ -16,12 +16,14 @@ namespace MvcCalendario.App.Controllers
         private readonly IClienteRepository _clienteRepository;
         private readonly IClienteService _clienteService;
         private readonly IEnderecoService _enderecoService;
+        private readonly IContatoService _contatoService;
 
         private readonly IMapper _mapper;
 
         public ClienteController(IClienteRepository clienteRepository,
             IClienteService clienteService,
             IEnderecoService enderecoService,
+            IContatoService contatoService,
             IMapper mapper,
             INotificador notificador) : base(notificador)
         {
@@ -29,6 +31,7 @@ namespace MvcCalendario.App.Controllers
             _clienteService = clienteService;
             _enderecoService = enderecoService;
             _mapper = mapper;
+            _contatoService = contatoService;
         }
 
 
@@ -38,6 +41,35 @@ namespace MvcCalendario.App.Controllers
         }
 
 
+
+        [Route("editar-cliente/{id:guid}")]
+        public async Task<IActionResult> Edit(Guid id)
+        {
+            var clienteViewModel = await PopularCliente(id);
+
+            if (clienteViewModel == null)
+            {
+                return NotFound();
+            }
+
+            return View("Edit", clienteViewModel);
+        }
+
+        [Route("editar-cliente/{id:guid}")]
+        [HttpPost]
+        public async Task<IActionResult> Edit(Guid id, ClienteViewModel clienteViewModel)
+        {
+            if (id != clienteViewModel.Id) return NotFound();
+
+            if (!ModelState.IsValid) return View(clienteViewModel);
+
+            var cliente = _mapper.Map<Cliente>(clienteViewModel);
+            await _clienteService.Atualizar(cliente);
+
+            if (!OperacaoValida()) return View(await ObterEnderecos(id));
+
+            return RedirectToAction("Index");
+        }
 
         [Route("dados-do-cliente/{id:guid}")]
         public async Task<IActionResult> Details(Guid id)
@@ -78,7 +110,7 @@ namespace MvcCalendario.App.Controllers
         }
 
 
-        [Route("novo-endereco/{id:guid}")]
+        [Route("novo-endereco-cliente/{id:guid}")]
         public async Task<IActionResult> NovoEndereco(Guid Id)
         {
             var enderecoViewModel = new EnderecoViewModel(Id);
@@ -86,8 +118,47 @@ namespace MvcCalendario.App.Controllers
             return PartialView("_NovoEndereco", enderecoViewModel);
         }
 
-        [Route("obter-endereco/{id:guid}")]
-        public async Task<IActionResult> ObterEndereco(Guid id)
+        [Route("novo-contato-cliente/{id:guid}")]
+        public async Task<IActionResult> NovoContato(Guid Id)
+        {
+            var contatoViewModel = new ContatoViewModel(Id);
+
+            return PartialView("_NovoContato", contatoViewModel);
+        }
+
+
+
+        [Route("excluir-cliente/{id:guid}")]
+        public async Task<IActionResult> Delete(Guid id)
+        {
+            var clienteViewModel = await PopularCliente(id);
+
+            if (clienteViewModel == null)
+            {
+                return NotFound();
+            }
+
+            return View(clienteViewModel);
+        }
+
+        [Route("excluir-cliente/{id:guid}")]
+        [HttpPost, ActionName("Delete")]
+        public async Task<IActionResult> DeleteConfirmed(Guid id)
+        {
+            var cliente = await PopularCliente(id);
+
+            if (cliente == null) return NotFound();
+
+            await _clienteService.Remover(id);
+
+            if (!OperacaoValida()) return View(cliente);
+
+            return RedirectToAction("Index");
+        }
+
+
+        [Route("obter-enderecos/{id:guid}")]
+        public async Task<IActionResult> ObterEnderecos(Guid id)
         {
             var cliente = await PopularCliente(id);
 
@@ -99,10 +170,23 @@ namespace MvcCalendario.App.Controllers
             return PartialView("_Enderecos", cliente);
         }
 
+        [Route("obter-contatos/{id:guid}")]
+        public async Task<IActionResult> ObterContatos(Guid id)
+        {
+            var cliente = await PopularCliente(id);
 
-        [Route("novo-endereco/{id:guid}")]
+            if (cliente == null)
+            {
+                return NotFound();
+            }
+
+            return PartialView("_Contatos", cliente);
+        }
+
+
+        [Route("novo-endereco-cliente/{id:guid}")]
         [HttpPost]
-        public async Task<IActionResult> AtualizarEndereco(EnderecoViewModel enderecoViewModel)
+        public async Task<IActionResult> NovoEndereco(EnderecoViewModel enderecoViewModel)
         {
 
             if (!ModelState.IsValid) return PartialView("_NovoEndereco", enderecoViewModel);
@@ -110,8 +194,8 @@ namespace MvcCalendario.App.Controllers
             var endereco = _mapper.Map<Endereco>(enderecoViewModel);
 
             await _enderecoService.Adicionar(endereco);
-            
-            if (!OperacaoValida()) return PartialView("_AtualizarEndereco", enderecoViewModel);
+
+            if (!OperacaoValida()) return PartialView("_NovoEndereco", enderecoViewModel);
 
             var url = Url.Action("ObterEnderecos", "Cliente", new { id = enderecoViewModel.ClienteId });
 
@@ -119,16 +203,22 @@ namespace MvcCalendario.App.Controllers
         }
 
 
-
-
-        private async Task<ClienteViewModel> PopularClientes(ClienteViewModel cliente)
+        [Route("novo-contato-cliente/{id:guid}")]
+        [HttpPost]
+        public async Task<IActionResult> NovoContato(ContatoViewModel contatoViewModel)
         {
-            var dados = await _clienteRepository.ObterClienteCompleto(cliente.Id);
 
-            cliente.Contatos = _mapper.Map<IEnumerable<ContatoViewModel>>(dados.Contatos);
-            cliente.Enderecos = _mapper.Map<IEnumerable<EnderecoViewModel>>(dados.Enderecos);
+            if (!ModelState.IsValid) return PartialView("_NovoContato", contatoViewModel);
 
-            return cliente;
+            var contato = _mapper.Map<Contato>(contatoViewModel);
+
+            await _contatoService.Adicionar(contato);
+
+            if (!OperacaoValida()) return PartialView("_NovoContato", contatoViewModel);
+
+            var url = Url.Action("ObterContatos", "Cliente", new { id = contatoViewModel.ClienteId });
+
+            return Json(new { success = true, url });
         }
 
 

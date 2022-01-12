@@ -5,8 +5,10 @@ namespace MvcCalendario.Business.Models
     public class Contato : Entity
     {
         public Guid ClienteId { get; set; }
-        public Telefone Telefone { get; set; }
-        public Telefone Celular { get; set; }
+
+        public string Telefone { get; set; }
+
+        public string Celular { get; set; }
 
         public string Email { get; set; }
 

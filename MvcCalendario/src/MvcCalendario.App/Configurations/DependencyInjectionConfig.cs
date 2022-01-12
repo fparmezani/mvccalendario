@@ -15,11 +15,13 @@ namespace MvcCalendario.App.Configurations
             services.AddScoped<MvcContext>();
             services.AddScoped<IClienteRepository, ClienteRepository>();
             services.AddScoped<IEnderecoRepository, EnderecoRepository>();
+            services.AddScoped<IContatoRepository, ContatoRepository>();
 
 
             services.AddScoped<INotificador, Notificador>();
             services.AddScoped<IClienteService, ClienteService>();
             services.AddScoped<IEnderecoService, EnderecoService>();
+            services.AddScoped<IContatoService, ContatoService>();
 
 
             return services;

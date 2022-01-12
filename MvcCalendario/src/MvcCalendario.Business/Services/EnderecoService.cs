@@ -19,7 +19,7 @@ namespace MvcCalendario.Business.Services
 
         public async Task Adicionar(Endereco endereco)
         {
-            //]if (!ExecutarValidacao(new EnderecoValidation(), endereco)) return;
+            if (!ExecutarValidacao(new EnderecoValidation(), endereco)) return;
 
             await _enderecoRepository.Adicionar(endereco);
         }

@@ -19,15 +19,8 @@ using MvcCalendario.App;
 #line default
 #line hidden
 #nullable disable
-#nullable restore
-#line 2 "F:\Projetos\Desenvolvimento\Consultoria\mvccalendario\MvcCalendario\src\MvcCalendario.App\Views\_ViewImports.cshtml"
-using MvcCalendario.App.Models;
-
-#line default
-#line hidden
-#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"99464617055fdb505bb0bb7fd91f9b14f7b0d030", @"/Views/Home/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"91a2f517a80f942776cad1597dd1a4cf78175aa3", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"fb3ca3ef22dfa129840ee8f3582606bb21d49ae1", @"/Views/_ViewImports.cshtml")]
     public class Views_Home_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #pragma warning disable 1998

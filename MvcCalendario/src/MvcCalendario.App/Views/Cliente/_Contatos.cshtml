@@ -4,6 +4,13 @@
         <h4>Contatos</h4>
         <hr />
     </div>
+
+    <p>
+        <a asp-action="NovoContato" asp-route-id="@Model.Id" class="btn btn-info" data-modal="">
+            <i class="fa fa-plus"></i> Novo Contato
+        </a>
+    </p>
+
     @if (Model != null)
     {
         <table class="table table-hover">
@@ -18,6 +25,12 @@
                     <th>
                         @Html.DisplayName("E-mail")
                     </th>
+                    <th>
+                        Principal?
+                    </th>
+                    <th>
+                        WhatsApp
+                    </th>
                     <th></th>
                 </tr>
             </thead>
@@ -25,16 +38,24 @@
             {
                 <tr>
                     <td>
-                        @Html.DisplayFor(model => model.Telefone)
+                        @item.Telefone
                     </td>
                     <td>
-                        @Html.DisplayFor(model => model.Celular)
+                        @item.Celular
                     </td>
                     <td>
-                        @Html.DisplayFor(model => model.Email)
+                        @item.Email
+                    </td>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Principal)
                     </td>
                     <td>
-                        <a supress-by-action="Edit,ObterEndereco" asp-action="AtualizarEndereco" asp-route-id="@Model.Id" class="btn btn-info" data-modal="">
+                        @Html.DisplayFor(modelItem => item.EhWhatsApp)
+                    </td>
+
+                    <td>
+                        <a asp-action="AtualizarContato" asp-route-id="@Model.Id" class="btn btn-info" data-modal="">
                             <span title="Editar" class="fa fa-pencil-alt"></span>
                         </a>
                     </td>
