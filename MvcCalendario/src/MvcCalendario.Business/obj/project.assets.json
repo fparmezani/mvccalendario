@@ -39,24 +39,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\victor.matucuma\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\fparm\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\victor.matucuma\\Desktop\\Projeto\\mvccalendario\\MvcCalendario\\src\\MvcCalendario.Business\\MvcCalendario.Business.csproj",
+      "projectUniqueName": "F:\\Projetos\\Desenvolvimento\\Consultoria\\mvccalendario\\MvcCalendario\\src\\MvcCalendario.Business\\MvcCalendario.Business.csproj",
       "projectName": "MvcCalendario.Business",
-      "projectPath": "C:\\Users\\victor.matucuma\\Desktop\\Projeto\\mvccalendario\\MvcCalendario\\src\\MvcCalendario.Business\\MvcCalendario.Business.csproj",
-      "packagesPath": "C:\\Users\\victor.matucuma\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\victor.matucuma\\Desktop\\Projeto\\mvccalendario\\MvcCalendario\\src\\MvcCalendario.Business\\obj\\",
+      "projectPath": "F:\\Projetos\\Desenvolvimento\\Consultoria\\mvccalendario\\MvcCalendario\\src\\MvcCalendario.Business\\MvcCalendario.Business.csproj",
+      "packagesPath": "C:\\Users\\fparm\\.nuget\\packages\\",
+      "outputPath": "F:\\Projetos\\Desenvolvimento\\Consultoria\\mvccalendario\\MvcCalendario\\src\\MvcCalendario.Business\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\victor.matucuma\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\fparm\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -64,7 +63,8 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {},
+        "https://pkgs.dev.azure.com/mongeral/_packaging/Nuget-Mongeral%40Local/nuget/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp3.1": {
@@ -102,7 +102,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }
