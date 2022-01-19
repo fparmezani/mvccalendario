@@ -1,23 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "F:\\Projetos\\Desenvolvimento\\Consultoria\\mvccalendario\\MvcCalendario\\src\\MvcCalendario.Data\\MvcCalendario.Data.csproj": {}
+    "C:\\Users\\victor.matucuma\\Desktop\\Projeto\\mvccalendario\\MvcCalendario\\src\\MvcCalendario.Data\\MvcCalendario.Data.csproj": {}
   },
   "projects": {
-    "F:\\Projetos\\Desenvolvimento\\Consultoria\\mvccalendario\\MvcCalendario\\src\\MvcCalendario.Business\\MvcCalendario.Business.csproj": {
+    "C:\\Users\\victor.matucuma\\Desktop\\Projeto\\mvccalendario\\MvcCalendario\\src\\MvcCalendario.Business\\MvcCalendario.Business.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Projetos\\Desenvolvimento\\Consultoria\\mvccalendario\\MvcCalendario\\src\\MvcCalendario.Business\\MvcCalendario.Business.csproj",
+        "projectUniqueName": "C:\\Users\\victor.matucuma\\Desktop\\Projeto\\mvccalendario\\MvcCalendario\\src\\MvcCalendario.Business\\MvcCalendario.Business.csproj",
         "projectName": "MvcCalendario.Business",
-        "projectPath": "F:\\Projetos\\Desenvolvimento\\Consultoria\\mvccalendario\\MvcCalendario\\src\\MvcCalendario.Business\\MvcCalendario.Business.csproj",
-        "packagesPath": "C:\\Users\\fparm\\.nuget\\packages\\",
-        "outputPath": "F:\\Projetos\\Desenvolvimento\\Consultoria\\mvccalendario\\MvcCalendario\\src\\MvcCalendario.Business\\obj\\",
+        "projectPath": "C:\\Users\\victor.matucuma\\Desktop\\Projeto\\mvccalendario\\MvcCalendario\\src\\MvcCalendario.Business\\MvcCalendario.Business.csproj",
+        "packagesPath": "C:\\Users\\victor.matucuma\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\victor.matucuma\\Desktop\\Projeto\\mvccalendario\\MvcCalendario\\src\\MvcCalendario.Business\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\fparm\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\victor.matucuma\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -25,8 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://pkgs.dev.azure.com/mongeral/_packaging/Nuget-Mongeral%40Local/nuget/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
@@ -64,24 +64,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "F:\\Projetos\\Desenvolvimento\\Consultoria\\mvccalendario\\MvcCalendario\\src\\MvcCalendario.Data\\MvcCalendario.Data.csproj": {
+    "C:\\Users\\victor.matucuma\\Desktop\\Projeto\\mvccalendario\\MvcCalendario\\src\\MvcCalendario.Data\\MvcCalendario.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Projetos\\Desenvolvimento\\Consultoria\\mvccalendario\\MvcCalendario\\src\\MvcCalendario.Data\\MvcCalendario.Data.csproj",
+        "projectUniqueName": "C:\\Users\\victor.matucuma\\Desktop\\Projeto\\mvccalendario\\MvcCalendario\\src\\MvcCalendario.Data\\MvcCalendario.Data.csproj",
         "projectName": "MvcCalendario.Data",
-        "projectPath": "F:\\Projetos\\Desenvolvimento\\Consultoria\\mvccalendario\\MvcCalendario\\src\\MvcCalendario.Data\\MvcCalendario.Data.csproj",
-        "packagesPath": "C:\\Users\\fparm\\.nuget\\packages\\",
-        "outputPath": "F:\\Projetos\\Desenvolvimento\\Consultoria\\mvccalendario\\MvcCalendario\\src\\MvcCalendario.Data\\obj\\",
+        "projectPath": "C:\\Users\\victor.matucuma\\Desktop\\Projeto\\mvccalendario\\MvcCalendario\\src\\MvcCalendario.Data\\MvcCalendario.Data.csproj",
+        "packagesPath": "C:\\Users\\victor.matucuma\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\victor.matucuma\\Desktop\\Projeto\\mvccalendario\\MvcCalendario\\src\\MvcCalendario.Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\fparm\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\victor.matucuma\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -89,15 +90,14 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://pkgs.dev.azure.com/mongeral/_packaging/Nuget-Mongeral%40Local/nuget/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "F:\\Projetos\\Desenvolvimento\\Consultoria\\mvccalendario\\MvcCalendario\\src\\MvcCalendario.Business\\MvcCalendario.Business.csproj": {
-                "projectPath": "F:\\Projetos\\Desenvolvimento\\Consultoria\\mvccalendario\\MvcCalendario\\src\\MvcCalendario.Business\\MvcCalendario.Business.csproj"
+              "C:\\Users\\victor.matucuma\\Desktop\\Projeto\\mvccalendario\\MvcCalendario\\src\\MvcCalendario.Business\\MvcCalendario.Business.csproj": {
+                "projectPath": "C:\\Users\\victor.matucuma\\Desktop\\Projeto\\mvccalendario\\MvcCalendario\\src\\MvcCalendario.Business\\MvcCalendario.Business.csproj"
               }
             }
           }
@@ -140,7 +140,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
         }
       }
     }
