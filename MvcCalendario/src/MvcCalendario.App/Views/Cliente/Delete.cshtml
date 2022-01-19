@@ -2,7 +2,7 @@
 @model MvcCalendario.App.ViewModels.ClienteViewModel
 
 @{
-    ViewData["Title"] = "Excluir Fornecedor";
+    ViewData["Title"] = "Excluir Cliente";
 }
 
 <h1>@ViewData["Title"]</h1>
@@ -16,7 +16,7 @@
             @Html.DisplayNameFor(model => model.Nome)
         </dt>
         <dd class="col-sm-10">
-            @this.FormataDocumento(Model.CPF)
+            @Html.DisplayNameFor(model => model.CPF)
         </dd>
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Grupo)

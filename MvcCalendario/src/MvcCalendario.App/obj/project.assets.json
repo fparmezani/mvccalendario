@@ -47,6 +47,15 @@
           "lib/netstandard2.0/Humanizer.dll": {}
         }
       },
+      "jQuery/1.7.0": {
+        "type": "package"
+      },
+      "jquery.mask/1.14.16": {
+        "type": "package",
+        "dependencies": {
+          "jQuery": "1.7.0"
+        }
+      },
       "Microsoft.AspNetCore.Cryptography.Internal/5.0.13": {
         "type": "package",
         "compile": {
@@ -2407,6 +2416,37 @@
         "lib/netstandard2.0/Humanizer.dll",
         "lib/netstandard2.0/Humanizer.xml",
         "logo.png"
+      ]
+    },
+    "jQuery/1.7.0": {
+      "sha512": "UEZuBreHZNLao3z9zNPeSadyoPwKDP/5kFh+Mn1Pm9ZS0czk7bv0O6RreloGSIMAfTLZCiigNkuPb2bXKtUM+g==",
+      "type": "package",
+      "path": "jquery/1.7.0",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Content/Scripts/jquery-1.7-vsdoc.js",
+        "Content/Scripts/jquery-1.7.js",
+        "Content/Scripts/jquery-1.7.min.js",
+        "Tools/install.ps1",
+        "Tools/jquery-1.7-vsdoc-para.js",
+        "Tools/uninstall.ps1",
+        "jquery.1.7.0.nupkg.sha512",
+        "jquery.nuspec"
+      ]
+    },
+    "jquery.mask/1.14.16": {
+      "sha512": "S1gXi0ch/FY4+ii2M2YwFV3ZuZHCvAI2+o8KrSfQxHq1J/F6xYZN7B6ONOR9k3YUTwAl+r3miZAFnkd/HWwNng==",
+      "type": "package",
+      "path": "jquery.mask/1.14.16",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Content/Scripts/jquery.mask.js",
+        "Content/Scripts/jquery.mask.min.js",
+        "jquery.mask.1.14.16.nupkg.sha512",
+        "jquery.mask.nuspec"
       ]
     },
     "Microsoft.AspNetCore.Cryptography.Internal/5.0.13": {
@@ -7926,27 +7966,29 @@
       "Microsoft.EntityFrameworkCore.Tools >= 5.0.13",
       "Microsoft.VisualStudio.Web.BrowserLink >= 2.2.0",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 5.0.2",
-      "MvcCalendario.Data >= 1.0.0"
+      "MvcCalendario.Data >= 1.0.0",
+      "jquery.mask >= 1.14.16"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\fparm\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\victor.matucuma\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\Projetos\\Desenvolvimento\\Consultoria\\mvccalendario\\MvcCalendario\\src\\MvcCalendario.App\\MvcCalendario.App.csproj",
+      "projectUniqueName": "C:\\Users\\victor.matucuma\\Desktop\\Projeto\\mvccalendario\\MvcCalendario\\src\\MvcCalendario.App\\MvcCalendario.App.csproj",
       "projectName": "MvcCalendario.App",
-      "projectPath": "F:\\Projetos\\Desenvolvimento\\Consultoria\\mvccalendario\\MvcCalendario\\src\\MvcCalendario.App\\MvcCalendario.App.csproj",
-      "packagesPath": "C:\\Users\\fparm\\.nuget\\packages\\",
-      "outputPath": "F:\\Projetos\\Desenvolvimento\\Consultoria\\mvccalendario\\MvcCalendario\\src\\MvcCalendario.App\\obj\\",
+      "projectPath": "C:\\Users\\victor.matucuma\\Desktop\\Projeto\\mvccalendario\\MvcCalendario\\src\\MvcCalendario.App\\MvcCalendario.App.csproj",
+      "packagesPath": "C:\\Users\\victor.matucuma\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\victor.matucuma\\Desktop\\Projeto\\mvccalendario\\MvcCalendario\\src\\MvcCalendario.App\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\fparm\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\victor.matucuma\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -7954,15 +7996,14 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {},
-        "https://pkgs.dev.azure.com/mongeral/_packaging/Nuget-Mongeral%40Local/nuget/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "F:\\Projetos\\Desenvolvimento\\Consultoria\\mvccalendario\\MvcCalendario\\src\\MvcCalendario.Data\\MvcCalendario.Data.csproj": {
-              "projectPath": "F:\\Projetos\\Desenvolvimento\\Consultoria\\mvccalendario\\MvcCalendario\\src\\MvcCalendario.Data\\MvcCalendario.Data.csproj"
+            "C:\\Users\\victor.matucuma\\Desktop\\Projeto\\mvccalendario\\MvcCalendario\\src\\MvcCalendario.Data\\MvcCalendario.Data.csproj": {
+              "projectPath": "C:\\Users\\victor.matucuma\\Desktop\\Projeto\\mvccalendario\\MvcCalendario\\src\\MvcCalendario.Data\\MvcCalendario.Data.csproj"
             }
           }
         }
@@ -8014,6 +8055,10 @@
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
             "target": "Package",
             "version": "[5.0.2, )"
+          },
+          "jquery.mask": {
+            "target": "Package",
+            "version": "[1.14.16, )"
           }
         },
         "imports": [
@@ -8034,7 +8079,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
       }
     }
   }

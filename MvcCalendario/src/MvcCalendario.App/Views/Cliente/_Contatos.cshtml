@@ -1,4 +1,5 @@
 ﻿@model MvcCalendario.App.ViewModels.ClienteViewModel
+
 <div style="padding-top: 20px">
     <div>
         <h4>Contatos</h4>
@@ -57,7 +58,9 @@
                     <td>
                         <a asp-action="AtualizarContato" asp-route-id="@Model.Id" class="btn btn-info" data-modal="">
                             <span title="Editar" class="fa fa-pencil-alt"></span>
+
                         </a>
+                       
                     </td>
                 </tr>
 

@@ -30,7 +30,9 @@ namespace MvcCalendario.App.ViewModels
         [DisplayName("Nome")]
         public string Nome { get; set; }
 
-        [Required(ErrorMessage = "O Campo {0} é obrigatório")]
+        public string Cep { get; set; }
+
+       
         [DisplayName("CPF")]
         public string CPF { get; set; }
 

@@ -4,7 +4,6 @@ namespace MvcCalendario.Business.Models
 {
     public class Endereco : Entity
     {
-
         public Guid ClienteId { get; set; }
 
         public string Logradouro { get; set; }

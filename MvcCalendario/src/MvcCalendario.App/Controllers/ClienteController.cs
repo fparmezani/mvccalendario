@@ -14,6 +14,7 @@ namespace MvcCalendario.App.Controllers
 
 
         private readonly IClienteRepository _clienteRepository;
+        private readonly IEnderecoRepository _enderecoRepository;
         private readonly IClienteService _clienteService;
         private readonly IEnderecoService _enderecoService;
         private readonly IContatoService _contatoService;
@@ -21,6 +22,7 @@ namespace MvcCalendario.App.Controllers
         private readonly IMapper _mapper;
 
         public ClienteController(IClienteRepository clienteRepository,
+            IEnderecoRepository enderecoRepository,
             IClienteService clienteService,
             IEnderecoService enderecoService,
             IContatoService contatoService,
@@ -29,6 +31,7 @@ namespace MvcCalendario.App.Controllers
         {
             _clienteRepository = clienteRepository;
             _clienteService = clienteService;
+            _enderecoRepository = enderecoRepository ;
             _enderecoService = enderecoService;
             _mapper = mapper;
             _contatoService = contatoService;
@@ -71,6 +74,37 @@ namespace MvcCalendario.App.Controllers
             return RedirectToAction("Index");
         }
 
+        [Route("editar-endereco/{id:guid}")]
+        public async Task<IActionResult> AtualizarEndereco(Guid id)
+        {
+            var enderecoViewModel = await PopularEndereco(id);
+
+            if (enderecoViewModel == null)
+            {
+                return NotFound();
+            }
+
+            return View("AtualizarEndereco", enderecoViewModel);
+        }
+
+        [Route("editar-endereco/{id:guid}")]
+        [HttpPost]
+        public async Task<IActionResult> AtualizarEndereco(Guid id, EnderecoViewModel enderecoViewModel)
+        {
+            if (id != enderecoViewModel.ClienteId) return NotFound();
+
+            if (!ModelState.IsValid) return View(enderecoViewModel);
+
+            var endereco = _mapper.Map<Endereco>(enderecoViewModel);
+            await _enderecoService.Atualizar(endereco);
+
+            if (!OperacaoValida()) return View(await ObterEnderecos(id));
+
+            return RedirectToAction("Index");
+        }
+
+
+
         [Route("dados-do-cliente/{id:guid}")]
         public async Task<IActionResult> Details(Guid id)
         {
@@ -101,12 +135,14 @@ namespace MvcCalendario.App.Controllers
             if (!ModelState.IsValid) return View(clienteViewModel);
 
             var cliente = _mapper.Map<Cliente>(clienteViewModel);
-
+            
+            //cliente.CPF = cliente.CPF.Replace("-", "").Replace(".","");
+            
             await _clienteService.Adicionar(cliente);
 
             if (!OperacaoValida()) return View(clienteViewModel);
 
-            return RedirectToAction("Index");
+            return View("Details", clienteViewModel);
         }
 
 
@@ -114,6 +150,7 @@ namespace MvcCalendario.App.Controllers
         public async Task<IActionResult> NovoEndereco(Guid Id)
         {
             var enderecoViewModel = new EnderecoViewModel(Id);
+            
 
             return PartialView("_NovoEndereco", enderecoViewModel);
         }
@@ -122,6 +159,7 @@ namespace MvcCalendario.App.Controllers
         public async Task<IActionResult> NovoContato(Guid Id)
         {
             var contatoViewModel = new ContatoViewModel(Id);
+            
 
             return PartialView("_NovoContato", contatoViewModel);
         }
@@ -193,6 +231,8 @@ namespace MvcCalendario.App.Controllers
 
             var endereco = _mapper.Map<Endereco>(enderecoViewModel);
 
+            //endereco.Cep = endereco.Cep.Replace("-", "");
+
             await _enderecoService.Adicionar(endereco);
 
             if (!OperacaoValida()) return PartialView("_NovoEndereco", enderecoViewModel);
@@ -211,6 +251,9 @@ namespace MvcCalendario.App.Controllers
             if (!ModelState.IsValid) return PartialView("_NovoContato", contatoViewModel);
 
             var contato = _mapper.Map<Contato>(contatoViewModel);
+
+            //contato.Telefone = contato.Telefone.Replace("()", "").Replace("-", "");
+            //contato.Celular = contato.Celular.Replace("()", "").Replace("-", "");
 
             await _contatoService.Adicionar(contato);
 
@@ -232,9 +275,17 @@ namespace MvcCalendario.App.Controllers
             return cliente;
         }
 
+        private async Task<EnderecoViewModel> PopularEndereco(Guid Id)
+        {
+            var endereco = _mapper.Map<EnderecoViewModel>(await _enderecoRepository.ObterPorId(Id));
+            return endereco;
+        }
 
 
 
+
+
+      
 
 
     }

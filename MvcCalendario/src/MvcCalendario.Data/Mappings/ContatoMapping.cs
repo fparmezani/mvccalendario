@@ -10,6 +10,10 @@ namespace MvcCalendario.Data.Mappings
         {
             builder.HasKey(p => p.Id);
 
+            builder.Property(p => p.Celular)
+               
+               .HasColumnType("varchar(11)");
+
             builder.ToTable("Contato");
         }
     }

@@ -1,4 +1,5 @@
-﻿@model MvcCalendario.App.ViewModels.ClienteViewModel
+﻿@using MvcCalendario.App.Extensions
+@model MvcCalendario.App.ViewModels.ClienteViewModel
 <div style="padding-top: 20px">
     <div>
         <h4>Endereço</h4>
@@ -57,7 +58,7 @@
                         @item.Bairro
                     </td>
                     <td>
-                        @item.Cep
+                        @this.FormataCEP(item.Cep)
                     </td>
                     <td>
                         @item.Cidade
@@ -66,9 +67,10 @@
                         @item.UF
                     </td>
                     <td>
-                        <a asp-action="AtualizarEndereco" asp-route-id="@Model.Id" class="btn btn-info" data-modal="">
+                        <a asp-action="AtualizarEndereco" asp-route-id="@item.Id" class="btn btn-info" data-modal="">
                             <span title="Editar" class="fa fa-pencil-alt"></span>
                         </a>
+                       
                     </td>
                 </tr>
 

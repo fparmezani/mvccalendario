@@ -50,17 +50,17 @@ namespace MvcCalendario.Business.Services
             {
                 var result = _clienteRepository.ObterClienteCompleto(id).Result;
 
-                if (result.Enderecos != null && result.Enderecos.Any())
-                {
-                    Notificar("O Cliente possui endereços cadastrados!");
-                    return;
-                }
+                //if (result.Enderecos != null && result.Enderecos.Any())
+                //{
+                //    Notificar("O Cliente possui endereços cadastrados!");
+                //    return;
+                //}
 
-                if (result.Contatos != null && result.Contatos.Any())
-                {
-                    Notificar("O Cliente possui contatos cadastrados!");
-                    return;
-                }
+                //if (result.Contatos != null && result.Contatos.Any())
+                //{
+                //    Notificar("O Cliente possui contatos cadastrados!");
+                //    return;
+                //}
 
                 var enderecos = _enderecoRepository.ObterEnderecosPorCliente(id);
                 var contatos = _contatoRepository.ObterContatosPorCliente(id);

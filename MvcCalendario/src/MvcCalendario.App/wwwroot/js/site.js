@@ -1,4 +1,16 @@
-﻿function SetModal() {
+﻿
+$(document).ready(function () {
+    $('.cpf').mask('000.000.000-00', { reverse: true });
+
+
+    $('.cep').mask('00000-000', { reverse: true });
+
+
+ 
+});
+
+
+function SetModal() {
 
     $(document).ready(function () {
         $(function () {

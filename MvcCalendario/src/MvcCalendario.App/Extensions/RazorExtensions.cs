@@ -14,5 +14,14 @@ namespace MvcCalendario.App.Extensions
         {
             return Convert.ToUInt64(documento).ToString(@"00000\-000");
         }
+
+        public static string FormataTelefone(this RazorPage page, string documento)
+        {
+            return Convert.ToUInt64(documento).ToString(@"(00) \0000\-000");
+        }
+        public static string FormataCelular(this RazorPage page, string documento)
+        {
+            return Convert.ToUInt64(documento).ToString(@"(00) \00000\-0000");
+        }
     }
 }

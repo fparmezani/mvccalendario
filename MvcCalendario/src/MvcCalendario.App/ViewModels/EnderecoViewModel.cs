@@ -1,12 +1,13 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace MvcCalendario.App.ViewModels
 {
-    public class EnderecoViewModel
+    public class EnderecoViewModel : EntityViewModel
     {
         public EnderecoViewModel()
         {
-
+          Enderecos = new List<EnderecoViewModel>();
         }
 
         public EnderecoViewModel(Guid Id)
@@ -15,6 +16,7 @@ namespace MvcCalendario.App.ViewModels
         }
 
         public Guid ClienteId { get; set; }
+        
         public string Logradouro { get; set; }
 
         public string Numero { get; set; }
@@ -28,6 +30,8 @@ namespace MvcCalendario.App.ViewModels
         public string Cidade { get; set; }
 
         public string UF { get; set; }
+
+        public IEnumerable<EnderecoViewModel> Enderecos { get; set; }
 
     }
 }

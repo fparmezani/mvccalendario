@@ -15,6 +15,10 @@ namespace MvcCalendario.Data.Mappings
                 .IsRequired()
                 .HasColumnType("varchar(200)");
 
+            builder.Property(p => p.CPF)
+              
+               .HasColumnType("varchar(200)");
+
             builder.ToTable("Cliente");
         }
 

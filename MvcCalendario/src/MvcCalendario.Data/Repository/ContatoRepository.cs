@@ -18,5 +18,7 @@ namespace MvcCalendario.Data.Repository
             return await Db.Contatos.AsNoTracking().Where(f => f.ClienteId == clienteId).ToListAsync();
 
         }
+
+       
     }
 }

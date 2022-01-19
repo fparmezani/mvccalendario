@@ -31,7 +31,7 @@ namespace MvcCalendario.Data.Context
 
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(MvcContext).Assembly);
 
-            foreach (var relationship in modelBuilder.Model.GetEntityTypes().SelectMany(e => e.GetForeignKeys())) relationship.DeleteBehavior = DeleteBehavior.ClientSetNull;
+            foreach (var relationship in modelBuilder.Model.GetEntityTypes().SelectMany(e => e.GetForeignKeys())) relationship.DeleteBehavior = DeleteBehavior.ClientCascade;
 
             base.OnModelCreating(modelBuilder);
 
