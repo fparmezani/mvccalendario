@@ -16,5 +16,8 @@ namespace MvcCalendario.Business.Models
 
         public bool EhWhatsApp { get; set; }
 
+        public Cliente Cliente { get; set; }
+
+
     }
 }

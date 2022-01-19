@@ -10,8 +10,8 @@ using MvcCalendario.Data.Context;
 namespace MvcCalendario.Data.Migrations
 {
     [DbContext(typeof(MvcContext))]
-    [Migration("20220118125123_mig02")]
-    partial class mig02
+    [Migration("20220119144344_Identity")]
+    partial class Identity
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -60,7 +60,7 @@ namespace MvcCalendario.Data.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("CPF")
-                        .HasColumnType("varchar(100)");
+                        .HasColumnType("varchar(200)");
 
                     b.Property<DateTime>("DataCadastro")
                         .HasColumnType("datetime2");

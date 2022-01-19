@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using MvcCalendario.Data.Context;
 
 namespace MvcCalendario.Data.Migrations
 {
     [DbContext(typeof(MvcContext))]
-    partial class MvcContextModelSnapshot : ModelSnapshot
+    [Migration("20220119144129_Initial")]
+    partial class Initial
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -166,24 +168,20 @@ namespace MvcCalendario.Data.Migrations
 
             modelBuilder.Entity("MvcCalendario.Business.Models.Contato", b =>
                 {
-                    b.HasOne("MvcCalendario.Business.Models.Cliente", "Cliente")
+                    b.HasOne("MvcCalendario.Business.Models.Cliente", null)
                         .WithMany("Contatos")
                         .HasForeignKey("ClienteId")
                         .OnDelete(DeleteBehavior.ClientCascade)
                         .IsRequired();
-
-                    b.Navigation("Cliente");
                 });
 
             modelBuilder.Entity("MvcCalendario.Business.Models.Endereco", b =>
                 {
-                    b.HasOne("MvcCalendario.Business.Models.Cliente", "Cliente")
+                    b.HasOne("MvcCalendario.Business.Models.Cliente", null)
                         .WithMany("Enderecos")
                         .HasForeignKey("ClienteId")
                         .OnDelete(DeleteBehavior.ClientCascade)
                         .IsRequired();
-
-                    b.Navigation("Cliente");
                 });
 
             modelBuilder.Entity("MvcCalendario.Business.Models.Cliente", b =>

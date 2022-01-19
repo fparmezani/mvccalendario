@@ -7,16 +7,11 @@ namespace MvcCalendario.App.ViewModels
     {
         public EnderecoViewModel()
         {
-          Enderecos = new List<EnderecoViewModel>();
-        }
-
-        public EnderecoViewModel(Guid Id)
-        {
-            ClienteId = Id;
+            Enderecos = new List<EnderecoViewModel>();
         }
 
         public Guid ClienteId { get; set; }
-        
+
         public string Logradouro { get; set; }
 
         public string Numero { get; set; }

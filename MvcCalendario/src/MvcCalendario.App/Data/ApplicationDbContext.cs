@@ -9,6 +9,5 @@ namespace MvcCalendario.App.Data
             : base(options)
         {
         }
-        public DbSet<MvcCalendario.Business.Models.Cliente> Cliente { get; set; }
     }
 }

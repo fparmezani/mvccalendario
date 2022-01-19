@@ -10,8 +10,8 @@ using MvcCalendario.Data.Context;
 namespace MvcCalendario.Data.Migrations
 {
     [DbContext(typeof(MvcContext))]
-    [Migration("20220114191307_mig01")]
-    partial class mig01
+    [Migration("20220119171736_Initial_2")]
+    partial class Initial_2
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -60,7 +60,7 @@ namespace MvcCalendario.Data.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("CPF")
-                        .HasColumnType("varchar(100)");
+                        .HasColumnType("varchar(200)");
 
                     b.Property<DateTime>("DataCadastro")
                         .HasColumnType("datetime2");
@@ -160,6 +160,7 @@ namespace MvcCalendario.Data.Migrations
                     b.HasOne("MvcCalendario.Business.Models.Cliente", "Cliente")
                         .WithMany()
                         .HasForeignKey("ClienteId")
+                        .OnDelete(DeleteBehavior.ClientCascade)
                         .IsRequired();
 
                     b.Navigation("Cliente");
@@ -167,18 +168,24 @@ namespace MvcCalendario.Data.Migrations
 
             modelBuilder.Entity("MvcCalendario.Business.Models.Contato", b =>
                 {
-                    b.HasOne("MvcCalendario.Business.Models.Cliente", null)
+                    b.HasOne("MvcCalendario.Business.Models.Cliente", "Cliente")
                         .WithMany("Contatos")
                         .HasForeignKey("ClienteId")
+                        .OnDelete(DeleteBehavior.ClientCascade)
                         .IsRequired();
+
+                    b.Navigation("Cliente");
                 });
 
             modelBuilder.Entity("MvcCalendario.Business.Models.Endereco", b =>
                 {
-                    b.HasOne("MvcCalendario.Business.Models.Cliente", null)
+                    b.HasOne("MvcCalendario.Business.Models.Cliente", "Cliente")
                         .WithMany("Enderecos")
                         .HasForeignKey("ClienteId")
+                        .OnDelete(DeleteBehavior.ClientCascade)
                         .IsRequired();
+
+                    b.Navigation("Cliente");
                 });
 
             modelBuilder.Entity("MvcCalendario.Business.Models.Cliente", b =>

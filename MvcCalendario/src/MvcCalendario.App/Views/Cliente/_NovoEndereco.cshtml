@@ -12,6 +12,7 @@
     <div class="modal-body">
 
         <input type="hidden" asp-for="ClienteId" />
+        <input type="hidden" id="Id" name="Id" value="@Model.Id" />
         <input type="hidden" id="divReturn" value="EnderecoTarget" />
 
         <div class="col-md">
@@ -64,7 +65,7 @@
 
         <div class="modal-footer">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Atualizar Endereço" class="btn btn-success" />
+                <input type="submit" value="Gravar Endereço" class="btn btn-success" />
                 <input type="button" class="btn btn-info" value="Fechar" data-dismiss="modal" />
             </div>
         </div>

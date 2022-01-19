@@ -14,7 +14,6 @@ namespace MvcCalendario.App.ViewModels
         {
             Contatos = new List<ContatoViewModel>();
             Enderecos = new List<EnderecoViewModel>();
-
         }
 
         #endregion
@@ -32,7 +31,7 @@ namespace MvcCalendario.App.ViewModels
 
         public string Cep { get; set; }
 
-       
+
         [DisplayName("CPF")]
         public string CPF { get; set; }
 

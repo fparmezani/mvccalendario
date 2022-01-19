@@ -31,7 +31,7 @@ namespace MvcCalendario.App.Controllers
         {
             _clienteRepository = clienteRepository;
             _clienteService = clienteService;
-            _enderecoRepository = enderecoRepository ;
+            _enderecoRepository = enderecoRepository;
             _enderecoService = enderecoService;
             _mapper = mapper;
             _contatoService = contatoService;
@@ -84,23 +84,25 @@ namespace MvcCalendario.App.Controllers
                 return NotFound();
             }
 
-            return View("AtualizarEndereco", enderecoViewModel);
+            return PartialView("AtualizarEndereco", enderecoViewModel);
         }
 
         [Route("editar-endereco/{id:guid}")]
         [HttpPost]
-        public async Task<IActionResult> AtualizarEndereco(Guid id, EnderecoViewModel enderecoViewModel)
+        public async Task<IActionResult> AtualizarEndereco(Guid clienteId, EnderecoViewModel enderecoViewModel)
         {
-            if (id != enderecoViewModel.ClienteId) return NotFound();
+            if (clienteId != enderecoViewModel.ClienteId) return NotFound();
 
             if (!ModelState.IsValid) return View(enderecoViewModel);
 
             var endereco = _mapper.Map<Endereco>(enderecoViewModel);
             await _enderecoService.Atualizar(endereco);
 
-            if (!OperacaoValida()) return View(await ObterEnderecos(id));
+            if (!OperacaoValida()) return View(await ObterEnderecos(clienteId));
 
-            return RedirectToAction("Index");
+            var url = Url.Action("ObterEnderecos", "Cliente", new { id = enderecoViewModel.ClienteId });
+
+            return Json(new { success = true, url });
         }
 
 
@@ -135,9 +137,9 @@ namespace MvcCalendario.App.Controllers
             if (!ModelState.IsValid) return View(clienteViewModel);
 
             var cliente = _mapper.Map<Cliente>(clienteViewModel);
-            
+
             //cliente.CPF = cliente.CPF.Replace("-", "").Replace(".","");
-            
+
             await _clienteService.Adicionar(cliente);
 
             if (!OperacaoValida()) return View(clienteViewModel);
@@ -149,9 +151,9 @@ namespace MvcCalendario.App.Controllers
         [Route("novo-endereco-cliente/{id:guid}")]
         public async Task<IActionResult> NovoEndereco(Guid Id)
         {
-            var enderecoViewModel = new EnderecoViewModel(Id);
-            
-
+            var enderecoViewModel = new EnderecoViewModel();
+            enderecoViewModel.ClienteId = Id;
+            enderecoViewModel.Id = Guid.NewGuid();
             return PartialView("_NovoEndereco", enderecoViewModel);
         }
 
@@ -159,7 +161,7 @@ namespace MvcCalendario.App.Controllers
         public async Task<IActionResult> NovoContato(Guid Id)
         {
             var contatoViewModel = new ContatoViewModel(Id);
-            
+
 
             return PartialView("_NovoContato", contatoViewModel);
         }
@@ -285,7 +287,7 @@ namespace MvcCalendario.App.Controllers
 
 
 
-      
+
 
 
     }

@@ -20,5 +20,7 @@ namespace MvcCalendario.Business.Models
 
         public string UF { get; set; }
 
+        public Cliente Cliente { get; set; }
+
     }
 }

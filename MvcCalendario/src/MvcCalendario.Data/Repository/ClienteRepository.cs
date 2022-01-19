@@ -31,10 +31,13 @@ namespace MvcCalendario.Data.Repository
 
         public async Task<Cliente> ObterClienteCompleto(Guid Id)
         {
-            return await Db.Clientes.AsNoTracking()
+            var cliente = await Db.Clientes.AsNoTracking()
                 .Include(f => f.Contatos)
                 .Include(f => f.Enderecos)
                 .FirstOrDefaultAsync(p => p.Id == Id);
+
+            return cliente;
+
         }
 
         public async Task<Cliente> ObterClienteEnderecos(Guid id)
